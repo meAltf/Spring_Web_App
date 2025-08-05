@@ -1,0 +1,4 @@
+1. FrontController :
+- It's automatically created by springBoot.
+- It's a layer just before Controller layer.
+- It helps request that came from client to point out which controller you need to go or fetch data.
