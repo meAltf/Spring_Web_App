@@ -1,4 +1,4 @@
-package com.robert.simpleWebApp;
+package com.robert.simpleWebApp.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
