@@ -3,9 +3,7 @@ package com.robert.simpleWebApp.Controller;
 import com.robert.simpleWebApp.DTO.ProductDTO;
 import com.robert.simpleWebApp.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,11 @@ public class ProductController {
     @RequestMapping("/getProduct/{prodId}")
     public ProductDTO getProductById(@PathVariable("prodId") int prodId) {
         return productService.getProductById(prodId);
+    }
+
+    @PostMapping("/products")
+    public void addProduct(@RequestBody ProductDTO productDTO) {
+        System.out.println(productDTO);
+        productService.addProduct(productDTO);
     }
 }
