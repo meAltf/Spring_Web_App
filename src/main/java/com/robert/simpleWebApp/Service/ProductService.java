@@ -17,4 +17,11 @@ public class ProductService {
     public List<ProductDTO> getProducts() {
         return products;
     }
+
+    public ProductDTO getProductById(int prodId) {
+        return products.stream().filter(product -> product.getProductId() == prodId)
+                .findFirst()
+                .orElse(new ProductDTO(100, "No Item", 0.0));
+
+    }
 }
