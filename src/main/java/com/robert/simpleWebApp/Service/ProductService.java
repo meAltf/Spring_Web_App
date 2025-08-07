@@ -29,4 +29,14 @@ public class ProductService {
     public void addProduct(ProductDTO productDTO) {
         products.add(productDTO);
     }
+
+    public void updateProduct(ProductDTO productDTO) {
+        int index = 0;
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getProductId() == productDTO.getProductId()) {
+                index = i;
+            }
+        }
+        products.set(index, productDTO);
+    }
 }
